@@ -71,6 +71,10 @@ class FlowNetwork(DirectedGraph):
                 new.flows[i][j] = self.flows[i][j]
         return new
 
+    # TODO: read in FN from file
+    def readFile(self, filename):
+        pass
+
 
 def residualFlow(F):
     nV = F.nV
