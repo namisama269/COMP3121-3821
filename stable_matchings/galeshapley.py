@@ -53,11 +53,7 @@ def getStableMatching(manPrefs, womanPrefs):
     # proposals[i][j] = 1 if man i has already proposed to woman j, else 0
     proposals = [[0] * n for _ in range(n)]
 
-    ncalls = 0
     while len(freeMen) > 0:
-        ncalls += 1
-        if ncalls > 10:
-            pass
         # Find a man who has not proposed to every woman yet
         candidate = None
         for m in freeMen:
