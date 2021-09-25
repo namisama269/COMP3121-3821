@@ -74,7 +74,7 @@ class UndirectedGraph:
         """
         self.nV = DG.nV
         self.nE = DG.nE
-        self.edges = [[None] * DG.nV for _ in range(G.nV)]
+        self.edges = [[None] * DG.nV for _ in range(DG.nV)]
         for i in range(DG.nV):
             for j in range(DG.nV):
                 self.edges[i][j] = DG.edges[i][j]
