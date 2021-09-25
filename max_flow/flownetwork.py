@@ -39,6 +39,9 @@ class FlowNetwork(DirectedGraph):
     def getCapacity(self, v1, v2):
         return super().getEdgeWeight(v1, v2)
 
+    def setCapacity(self, v1, v2, cap):
+        super().setEdgeWeight(v1, v2, cap)
+
     def vertexIdxToName(self, vertex):
         if vertex == 0:
             return 's'
