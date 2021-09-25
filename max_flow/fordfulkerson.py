@@ -2,7 +2,7 @@
 Implementation of Ford-Fulkerson algorithm for finding max flow
 """
 from graphs.graphtraversals import dfs
-from flownetwork import FlowNetwork, residualFlow
+from flownetwork import FlowNetwork, residualFlow, importFNFromFile
 
 def fordFulkerson(F):
     nV = F.getNumVertices()
@@ -60,22 +60,10 @@ def fordFulkerson(F):
     return maxFlow
 
 if __name__ == "__main__":
-    n = 6 # number of nodes in network including source and sink
-    s, t = 0, n-1
-    F = FlowNetwork(n)
+    F = importFNFromFile("max_flow/examples/1.txt")
+    print(fordFulkerson(F))
 
-    # insert edges
-    F.insertEdge(s,1,16)
-    F.insertEdge(s,2,13)
-    F.insertEdge(1,2,10)
-    F.insertEdge(2,1,4)
-    F.insertEdge(1,3,12)
-    F.insertEdge(2,4,14)
-    F.insertEdge(3,2,9)
-    F.insertEdge(4,3,7)
-    F.insertEdge(3,t,20)
-    F.insertEdge(4,t,4)
-
+    F = importFNFromFile("max_flow/examples/2.txt")
     print(fordFulkerson(F))
 
         
