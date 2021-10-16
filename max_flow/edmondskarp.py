@@ -3,6 +3,9 @@ Implementation of Edmonds-Karp algorithm for finding max flow
 
 The only difference from Ford-Fulkerson is to always choose the SHORTEST augmenting path from source to sink, which can be found using BFS
 """
+import sys
+sys.path.append('.')
+
 from graphs.graphtraversals import bfs
 from flownetwork import FlowNetwork, residualFlow
 

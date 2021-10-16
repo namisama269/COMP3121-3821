@@ -1,6 +1,9 @@
 """
 Implementation of Ford-Fulkerson algorithm for finding max flow
 """
+import sys
+sys.path.append('.')
+
 from graphs.graphtraversals import dfs
 from flownetwork import FlowNetwork, residualFlow, importFNFromFile
 
@@ -19,22 +22,6 @@ def fordFulkerson(F):
         if path is None:
             break
 
-        """
-        print('*'*70)
-        print(f"Iteration {itt}")
-        print('*'*70)
-        print()
-        print("F")
-        F.printFlows()
-        print()
-        print("RF")
-        RF.printFlows()
-        print()
-
-        print(path)
-        print()
-        """
-
         # Find the bottleneck edge on the path (min capacity)
         bottleneck = RF.getCapacity(path[0], path[1])
         for i in range(1, len(path)-1):
@@ -51,11 +38,6 @@ def fordFulkerson(F):
         
         # Continue searching for augmented paths on the new residual flow
         RF = residualFlow(FW)
-        """
-        print("FW")
-        FW.printFlows()
-        print()
-        """
     
     return maxFlow
 
