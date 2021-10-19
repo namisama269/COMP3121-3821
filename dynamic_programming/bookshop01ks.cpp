@@ -83,7 +83,6 @@ int main() {
     
     fill(dp+1, dp+x+1, -1);
 
-    // no duplicates allowed => loop over books first
     for (int i = 0; i < n; ++i) {
         // 
         for (int j = x-h[i]; j >= 0; --j) {
