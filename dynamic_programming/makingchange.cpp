@@ -48,6 +48,23 @@ int main() {
         }
     }
 
+    cout<<nl;
     cout << dp[x] << nl;
+
+    // backtrack to find the solution
+    int unused = dp[x];
+    vector<int> soln;
+    while (x > 0) {
+        for (auto coin: coins) {
+            if (dp[x-coin] == unused-1) {
+                soln.push_back(coin);
+                x -= coin;
+                --unused;
+                break;
+            }
+        }
+    }
+    print1(soln, soln.size());
+
     return 0;
 }
