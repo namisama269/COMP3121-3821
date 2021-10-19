@@ -3,7 +3,7 @@ from sequences import padzero, dot, convolution
 
 def p_a(a, k):
     """
-    Evaluate the polynomial sum_{j=0 to n-1} (a_j * w_n^jk), where
+    Evaluate the polynomial sum_{l=0 to n-1} (a_l * w_n^lk), where
     w_n is the primitive nth root of unity
     j is reserved for representing i
     """
