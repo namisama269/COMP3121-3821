@@ -54,6 +54,7 @@ int main() {
     // backtrack to find the solution
     int unused = dp[x];
     vector<int> soln;
+    sort(all(coins)); // ensure correct solution is added by subtracting the lowest possible coin 
     while (x > 0) {
         for (auto coin: coins) {
             if (dp[x-coin] == unused-1) {
