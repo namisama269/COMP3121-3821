@@ -32,7 +32,7 @@ def printPreorder(root):
 
 def huffmanTree(freqs):
     """
-    Create a Huffman tree form the
+    Create a Huffman tree from the dict of frequencies
     """
 
     # Insert singular nodes for each character into priority queue
