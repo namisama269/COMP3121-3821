@@ -1,7 +1,7 @@
 """
 3 solutions to 0-1 knapsack problem, each optimises the space complexity
 from O(nw) to O(1w)
-x = capacity, v = values, w = weight, n = number of values/weightsß
+x = capacity, v = values, w = weight, n = number of values/weights
 
 
 Basic 2D solution. 
